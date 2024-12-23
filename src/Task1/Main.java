@@ -12,12 +12,12 @@ public class Main {
                 "Java.\n");
 
         // Задача 2: Посчитать результаты выражений
-        int result1 = (46 + 10) * (10 / 3);
+        double result1 = (46 + 10) * (10 / (double)3);
         int result2 = 29 * 4 * -15;
 
         // Задача 3: Вычисление выражения с переменной number
         int number = 10500;
-        int result = number / 10 / 10;
+        double result = number / (double)10 / (double)10;
         System.out.println("Результат выражения с переменной number = " + result + "\n");
 
         // Задача 4: Произведение трех чисел
