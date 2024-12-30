@@ -5,25 +5,25 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        // Задача 1: Вывод строк в заданном порядке
+        // Задача 1.1: Вывод строк в заданном порядке
         System.out.println("Я\n" +
                 "хорошо\n" +
                 "знаю\n" +
                 "Java.\n");
 
-        // Задача 2: Посчитать результаты выражений
-        double result1 = (46 + 10) * (10 / (double)3);
+        // Задача 1.2: Посчитать результаты выражений
+        double result1 = (46 + 10) * (10 / (double) 3);
         int result2 = 29 * 4 * -15;
 
-        // Задача 3: Вычисление выражения с переменной number
+        // Задача 1.3: Вычисление выражения с переменной number
         int number = 10500;
-        double result = number / (double)10 / (double)10;
+        double result = number / (double) 10 / (double) 10;
         System.out.println("Результат выражения с переменной number = " + result + "\n");
 
-        // Задача 4: Произведение трех чисел
+        // Задача 1.4: Произведение трех чисел
         double result3 = 3.6 * 4.1 * 5.9;
 
-        // Задача 5: Считывание и вывод целых чисел
+        // Задача 1.5: Считывание и вывод целых чисел
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите целые числа последовательно: 42, 100, 125");
         scanner.hasNextInt();
@@ -37,7 +37,7 @@ public class Main {
         System.out.println(input2 + "\n");
 
 
-        // Задача 6: Вывод четного и нечетного числа
+        // Задача 1.6: Вывод четного и нечетного числа
         System.out.println("Введите целое число");
         int b = scanner.nextInt();
         if (b % 2 != 0) {
