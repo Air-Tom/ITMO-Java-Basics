@@ -4,6 +4,17 @@ package Task2;
 // способных вычислять 3 типа данных double, long и int
 
 public class Calculator {
+    // Класс для возврата результата деления
+    public static class DivisionResult {
+        public int quotient; // целая часть
+        public int remainder; // остаток
+
+        public DivisionResult(int quotient, int remainder) {
+            this.quotient = quotient;
+            this.remainder = remainder;
+        }
+    }
+
     // Создание метода "Сумма" для типа данных double
     public static double sum(double a, double b) {
         return a + b;
@@ -39,13 +50,17 @@ public class Calculator {
     }
 
     // Создание метода "Деление" для типа данных long
-    public static long division(long a, long b) {
-        return a / b;
+    public static DivisionResult division(long a, long b) {
+        long quotient = a / b; // целая часть
+        long remainder = a % b; // остаток
+        return new DivisionResult((int) quotient, (int) remainder);
     }
 
     // Создание метода "Деление" для типа данных int
-    public static int division(int a, int b) {
-        return a / b;
+    public static DivisionResult division(int a, int b) {
+        int quotient = a / b;
+        int remainder = a % b;
+        return new DivisionResult(quotient, remainder);
     }
 
     // // Перегрузка метода "Деление" для трех чисел с различными типами данных
@@ -53,12 +68,14 @@ public class Calculator {
         return a / b / c;
     }
 
-    public static long division(long a, long b, long c) {
-        return a / b / c;
+    public static DivisionResult division(long a, long b, long c) {
+        DivisionResult result1 = division(a, b);
+        return division(result1.quotient, c);
     }
 
-    public static int division(int a, int b, int c) {
-        return a / b / c;
+    public static DivisionResult division(int a, int b, int c) {
+        DivisionResult result1 = division(a, b);
+        return division(result1.quotient, c);
     }
 
 

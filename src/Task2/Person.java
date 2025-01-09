@@ -10,11 +10,6 @@ public class Person {
 
     // Конструктор без параметров
     public Person() {
-        this.firstname = "No name";
-        this.lastname = "No last name";
-        this.age = 0;
-        this.salary = 0.0;
-        this.phoneNumber = "No phone number";
     }
 
     // Конструктор со всеми параметрами
@@ -69,7 +64,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Person {" +
                 "Firstname: '" + firstname + '\'' +
                 ", Lastname: '" + lastname + '\'' +
                 ", Age: " + age +
