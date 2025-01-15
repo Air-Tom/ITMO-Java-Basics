@@ -1,7 +1,6 @@
 package Task4;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class Array {
@@ -9,7 +8,7 @@ public class Array {
     // Метод проверки для числа 3, является или нет первым, или последним Э массива
     public static boolean isThreeFirstOrLast(int[] array) {
         // Проверка длины массива <=2
-        if (array.length <= 2) {
+        if (array.length == 0) {
             System.out.println("Длина массива должна быть больше или равна двум.");
         }
         // Проверка певрого и последнего Э
@@ -76,20 +75,23 @@ public class Array {
 
     // Задача 4.2.4: Найдите первое уникальное в этом массиве число
     public static int findFirstUnique(int[] arr) {
-        HashMap<Integer, Integer> countMap = new HashMap<>();
 
-        // Подсчитываем количество вхождений каждого числа
-        for (int num : arr) {
-            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
-        }
 
-        // Находим первое уникальное число
-        for (int num : arr) {
-            if (countMap.get(num) == 1) {
-                return num; // Возвращаем первое уникальное число
+        // Проверка на уникальность Э массива
+        for (int i = 0; i < arr.length; i++) {
+            boolean isUnique = true;
+
+            // Сравниваем с остальными Э-ми
+            for (int j = 0; j < arr.length; j++) {
+                if (i != j && arr[i] == arr[j]) {
+                    isUnique = false;
+                    break;
+                }
+            }
+            if (isUnique) {
+                return arr[i];
             }
         }
-
         return -1; // Если уникальных чисел нет
     }
 }

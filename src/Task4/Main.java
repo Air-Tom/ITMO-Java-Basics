@@ -10,15 +10,15 @@ public class Main {
         System.out.println();
 
         Numbers divisibleBy3 = new Numbers();
-        divisibleBy3.Enum3();
+        divisibleBy3.enum3();
         System.out.println();
 
         Numbers divisibleBy5 = new Numbers();
-        divisibleBy5.Enum5();
+        divisibleBy5.enum5();
         System.out.println();
 
         Numbers divisibleBy35 = new Numbers();
-        divisibleBy35.Enum35();
+        divisibleBy35.enum35();
         System.out.println();
 
         // Задача 4.1.3: вычислить сумму двух целых чисел и вернуть true, если сумма равна третьему целому числу
@@ -55,9 +55,10 @@ public class Main {
         int[] array = {21, 235, 463, 64, 97, 23, 75, 68, 1};
         int[] array2 = {3, 235, 463, 64, 97, 23, 75, 68};
         int[] array3 = {-43, 235, 463, 64, 97, 23, 75, 3};
-        int[] array4 = {4, 235};
+        int[] array4 = {3};
         int[] array5 = {4, 65, 76, 127, 203, 233, 235};
         int[] array6 = new int[10];
+//        int[] array34 = {};
 
 
         boolean result2 = Array.isThreeFirstOrLast(array);
@@ -65,16 +66,20 @@ public class Main {
         System.out.println(result2);
 
         boolean result3 = Array.isThreeFirstOrLast(array2);
-        System.out.println("array = " + Arrays.toString(array2));
+        System.out.println("array2 = " + Arrays.toString(array2));
         System.out.println(result3);
 
         boolean result4 = Array.isThreeFirstOrLast(array3);
-        System.out.println("array = " + Arrays.toString(array3));
+        System.out.println("array3 = " + Arrays.toString(array3));
         System.out.println(result4);
 
         boolean result5 = Array.isThreeFirstOrLast(array4);
-        System.out.println("array = " + Arrays.toString(array4));
+        System.out.println("array4 = " + Arrays.toString(array4));
         System.out.println(result5 + "\n");
+
+//        boolean result90 = Array.isThreeFirstOrLast(array34);
+//        System.out.println("array4 = " + Arrays.toString(array34));
+//        System.out.println(result90 + "\n");
 
         // Задача 4.1.6: Проверить появляется ли число 3
         boolean result6 = Array.isContainsOrNo(array);
@@ -108,6 +113,14 @@ public class Main {
         int uniqueNumber = Array.findFirstUnique(array8);
         if (uniqueNumber != -1) {
             System.out.println("Первое уникальное число: " + uniqueNumber);
+        } else {
+            System.out.println("Уникальных чисел нет.");
+        }
+
+        int[] array23 = {};
+        int uniqueNumber1 = Array.findFirstUnique(array23);
+        if (uniqueNumber1 != -1) {
+            System.out.println("Первое уникальное число: " + uniqueNumber1);
         } else {
             System.out.println("Уникальных чисел нет.");
         }
