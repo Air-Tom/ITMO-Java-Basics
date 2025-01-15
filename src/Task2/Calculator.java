@@ -4,7 +4,7 @@ package Task2;
 // способных вычислять 3 типа данных double, long и int
 
 public class Calculator {
-        // Создание метода "Сумма" для типа данных double
+    // Создание метода "Сумма" для типа данных double
     public static double sum(double a, double b) {
         return a + b;
     }
@@ -40,12 +40,12 @@ public class Calculator {
 
     // Создание метода "Деление" для типа данных long
     public static double division(long a, long b) {
-        return (double)a / b;
+        return (double) a / b;
     }
 
     // Создание метода "Деление" для типа данных int
     public static double division(int a, int b) {
-        return (double)a / b;
+        return (double) a / b;
     }
 
     // Перегрузка метода "Деление" для трех чисел с различными типами данных
@@ -54,12 +54,12 @@ public class Calculator {
     }
 
     public static double division(long a, long b, long c) {
-        return (double)a / b / c;
+        return (double) a / b / c;
     }
 
 
     public static double division(int a, int b, int c) {
-        return (double)a / b / c;
+        return (double) a / b / c;
     }
 
 
