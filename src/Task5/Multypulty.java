@@ -38,10 +38,10 @@ public class Multypulty {
     }
 
     // Задача 5.3: метод, заменяющий в тексте все вхождения слова «бяка» на «[вырезано цензурой]»
-    public static String сensorshipCheck(String text) {
+    public static String сensorshipCheck(String text, String targetWord, String replacement) {
         // Делаем все слова в тексте в нижнем регистре и заменяем все слова "бяка"
         String lowerText = text.toLowerCase();
-        return lowerText.replace("бяка", "[вырезано цензурой]");
+        return lowerText.replace(targetWord, replacement);
     }
 
     // Задача 5.4: Написать метод, который находит количество вхождений одной (являющейся подстрокой) в другую

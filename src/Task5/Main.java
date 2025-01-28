@@ -39,7 +39,7 @@ public class Main {
 
         // Задача 5.3: start
         String text1 = "Бяка, бяка, бЯка, бяКа, бякА - как-то так.";
-        String censoredText = Multypulty.сensorshipCheck(text1);
+        String censoredText = Multypulty.сensorshipCheck(text1, "бяка", "[вырезано цензурой]");
         System.out.println(censoredText);
 
         // Задача 5.4: start
